@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Cajero automático</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="atm-form">
+      <h1>Cajero automático</h1>
+      <label for="saldo">Saldo:</label>
+      <input type="text" id="saldo" value="2000000" disabled><br><br>
+      <label for="operacion">Operación:</label>
+      <select id="operacion" onchange="toggleDestinoField()">
+        <option value="retiro">Retiro</option>
+        <option value="transferencia">Transferencia</option>
+      </select><br><br>
+      <label for="monto">Monto:</label>
+      <input type="text" id="monto"><br><br>
+      <label for="destino">Destino:</label>
+      <input type="text" id="destino"><br><br>
+      <button onclick="realizarOperacion()">Realizar operación</button>
+      <p id="resultado"></p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
